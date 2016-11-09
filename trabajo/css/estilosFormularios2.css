@@ -1,0 +1,77 @@
+
+/*inicio de estilos de pantallaFormulario */
+	{
+	margin:0;
+	font-family: sans-serif;
+
+}
+
+body{
+	background-image: url(../css/fondo2.jpg);
+	background-size: 100vw 100vh;
+	background-attachment: fixed;
+	padding-top: 10px;
+}
+
+h4{
+	
+	text-align: center;
+}
+#form-register2{
+	width: 100%;
+	max-width: 650px;
+	margin: auto;
+	background-color: #F2F2F2;
+	border-radius: 5px;
+	padding: 5px 5px 5px 5px;
+}
+
+#mostrar{
+	height: 150px;
+	background-color: white;
+	border: 1px solid gray;
+	border-radius: 5px;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+#boton{
+	text-align: center;
+	margin-bottom: 20px;
+	text-align: center;
+}
+/*fin de estilos de pantallaFormulario */
+
+
+/*inicio de estilos de pantalla_Grupo_Ador */
+#form-registerGA{
+	width: 100%;
+	max-width: 455px;
+	margin: auto;
+	background-color: #F2F2F2;
+	border-radius: 5px;
+	padding: 5px 5px 5px 5px;
+}
+
+/*fin de estilos de pantalla_Grupo_Ador */
+
+/*inicio de estilos de pantallaSacramento */
+#formSacra{
+	width: 100%;
+	max-width: 455px;
+	margin: auto;
+	background-color: #F2F2F2;
+	border-radius: 5px;
+	padding: 5px 5px 5px 5px;
+}
+
+	#mostrarSacra{
+		height: 150px;
+		background-color: white;
+		border: 1px solid gray;
+		border-radius: 5px;
+		margin-left: 2%;
+		margin-right: 2%;
+	}
+/*fin de estilos de pantallaSacramento */
+
