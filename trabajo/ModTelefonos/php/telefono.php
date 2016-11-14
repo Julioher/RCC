@@ -1,5 +1,5 @@
 <?php
-include "../../php/conexion.php";
+include "../../ModGeneral/php/conexion.php";
 $txtCodigoTelefono = $_POST['txtCodigoTelefono'];
 $txtTipoTelefono   = $_POST['txtTipoTelefono'];
 $accion            = $_POST['accion'];

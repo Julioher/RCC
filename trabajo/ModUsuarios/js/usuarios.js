@@ -1,6 +1,7 @@
 
 function obtenerValoresObjetos(){
 	txtCodigoUsuario = $("#txtCodigoUsuario").val();
+	txtCodigoFeligres = $("#txtCodigoFeligres").val();
 	txtNombreUsuario = $("#txtNombreUsuario").val();
 	txtUsuario = $("#txtUsuario").val();
 	txtClaveUsuario = $("#txtClaveUsuario").val();
@@ -9,6 +10,7 @@ function obtenerValoresObjetos(){
 
 function limpiarObjetos(){
 	$("#txtCodigoUsuario").val("");
+	$("#txtCodigoFeligres").val("");
 	$("#txtNombreUsuario").val("");
 	$("#txtUsuario").val("");
 	$("#txtClaveUsuario").val("");
@@ -22,11 +24,11 @@ function limpiarDatos(){
 	$("#mostrar").html("");
 }
 
-function subirDatos(idUsuario, idFeligres, usuario, clave, nivel){
+function subirDatos(idUsuario, idFeligres, pApellido, sApellido, pNombre, sNombre, usuario, nivel){
 	$("#txtCodigoUsuario").val(idUsuario);
-	$("#txtNombreUsuario").val(idFeligres);
+	$("#txtNombreUsuario").val(pApellido+" "+sApellido+" "+pNombre+" "+sNombre);
+	$("#txtCodigoFeligres").val(idFeligres);
 	$("#txtUsuario").val(usuario);
-	$("#txtClaveUsuario").val(clave);
 	$("#cmbNivelUsuario").val(nivel);
 	$("#txtNombreUsuario").focus();
 }
@@ -48,8 +50,8 @@ function insertarDatos(){//inicio de función insertarDatos
 			 cahe:false,
 			 type:"POST",
 			 data:{
-			 	txtNombreUsuario:txtNombreUsuario,
-				txtUsuario:txtUsuario,
+			 	txtUsuario:txtUsuario,
+				txtFeligres:txtCodigoFeligres,
 				txtClaveUsuario:txtClaveUsuario,
 				cmbNivelUsuario:cmbNivelUsuario,
 				accion:'insertar'},
@@ -108,8 +110,9 @@ function modificarDatos(){//inicio de función modificarDatos
 				type:"POST",
 				data:{
 				txtCodigoUsuario:txtCodigoUsuario,
-				txtUsuario:txtUsuario,
-				txtClaveUsuario:txtClaveUsuario,
+				//stxtCodigoFeligres:txtCodigoFeligres,
+				//txtUsuario:txtUsuario,
+				//txtClaveUsuario:txtClaveUsuario,
 				cmbNivelUsuario:cmbNivelUsuario,
 				  accion:'modificar'},
 				 success:function(resultado){

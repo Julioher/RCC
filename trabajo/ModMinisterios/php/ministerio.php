@@ -1,5 +1,5 @@
 <?php
-include "../../php/conexion.php";
+include "../../ModGeneral/php/conexion.php";
 $txtCodigoMinisterio  = $_POST['txtCodigoMinisterio'];
 $txtNombreMinisterio  = $_POST['txtNombreMinisterio'];
 $cmbEstadosMinisterio = $_POST['cmbEstadosMinisterio'];

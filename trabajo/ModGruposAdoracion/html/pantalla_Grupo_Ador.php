@@ -3,8 +3,8 @@
 	<head>
 		<title>Pantalla Grupos de Adoración</title>
 		<meta charset="utf8">
-		<link rel="stylesheet" href="../../css/estilosFormularios2.css">
-		<script type="text/javascript" src="../../js/jquery_p.js"></script>
+		<link rel="stylesheet" href="../../ModGeneral/css/estilosFormularios2.css">
+		<script type="text/javascript" src="../../ModGeneral/js/jquery_p.js"></script>
         <script type="text/javascript" src="../../ModGruposAdoracion/js/grupoAdor.js"></script>
 	</head>
 	<body background="fondo2.jpg">

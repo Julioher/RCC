@@ -1,9 +1,9 @@
 <?php
-include "../../php/conexion.php";
-$txtCodigoComunion = $_POST['txtCodigoComunion'];
+include "../../ModGeneral/php/conexion.php";
+$txtCodigoComunion  = $_POST['txtCodigoComunion'];
 $txtNombreComunante = $_POST['txtNombreComunante'];
-$txtSacerdote = $_POST['txtSacerdote'];
-$accion              = $_POST['accion'];
+$txtSacerdote       = $_POST['txtSacerdote'];
+$accion             = $_POST['accion'];
 
 switch ($accion) {
     case "insertar":{
@@ -27,7 +27,7 @@ switch ($accion) {
             if ($txtNombreComunante != "") {
                 $donde .= " AND idComunante like '%" . $txtNombreComunante . "%'";
             }
-             if ($txtSacerdote != "") {
+            if ($txtSacerdote != "") {
                 $donde .= " AND idSacerdote like '%" . $txtSacerdote . "%'";
             }
 

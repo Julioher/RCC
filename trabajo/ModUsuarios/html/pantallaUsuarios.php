@@ -1,43 +1,37 @@
-<?php
-include '../../php/conexion.php';
-?>
-
 <!DOCTYPE HTML>
 <html>
     <head>
         <title>Pantalla Usuarios</title>
         <meta charset="utf8">
-        <script type="text/javascript" src="../../js/jquery_p.js"></script>
-        <script type="text/javascript" src="../../js/jquery-ui.js"></script><!--agregado reciente-->
-        <script type="text/javascript" src="../../js/jquery-ui.min.js"></script><!--agregado reciente-->
+        <script type="text/javascript" src="../../ModGeneral/js/jquery_p.js"></script>
+        <script type="text/javascript" src="../../ModGeneral/js/jquery-ui.js"></script><!--agregado reciente-->
         <script type="text/javascript" src="../../ModUsuarios/js/usuarios.js"></script>
         <script type="text/javascript" src="../../ModUsuarios/js/buscarFeligres.js"></script>
-        <link rel="stylesheet" href="../../css/estilosFormularios2.css">
+        <link rel="stylesheet" href="../../ModGeneral/css/estilosFormularios2.css">
     </head>
-    <body background="fondo2.jpg">
+    <body>
         <div class="agrupamiento"><!--inicio div agrupamiento-->
             <form  id="formSacra">
                 <h4>Registro de Usuarios</h4>
                 <table id="tbpadre">
                     <tr>
                         <td><label>Código</label></td>
-                        <td><input type="text" name="txtCodigoUsuario" id="txtCodigoUsuario" size="9"/></td>
-                    </tr>
-                    <tr>
-                        <td><label>Nombre</label></td>
-                        <td>
-                         <input type="text" class="busca"  name="txtNombreUsuario" id="txtNombreUsuario" size="58" />
-                           <!--<div id="resultado" style="width:1000px; heigt:1000px;"></div>-->
-                            <div style="position:absolute; background-color:#F2F2F2; " id="display"></div>
+                        <td><input type="text" name="txtCodigoUsuario" id="txtCodigoUsuario" size="9"/>
+                            <input type="text" name="txtCodigoFeligres" id="txtCodigoFeligres" size="9"/>
                         </td>
                     </tr>
                     <tr>
+                        <td><label>Nombre</label></td>
+                        <td><input type="text" name="txtNombreUsuario" id="txtNombreUsuario" size="58" onKeyUp="fnBuscarPersonaNombresApellidos(this.id, 'txtCodigoFeligres')"/></td>
+                        <?php include 'divBuscador.php';?>
+                    </tr>
+                    <tr>
                         <td>Usuario</td>
-                        <td><input type="password" name="txtUsuario" id="txtUsuario" size="58"/></td>
+                        <td><input type="text" name="txtUsuario" id="txtUsuario" size="58"/></td>
                     </tr>
                     <tr>
                         <td>Clave</td>
-                        <td><input type="text" name="txtClaveUsuario" id="txtClaveUsuario" size="58"/></td>
+                        <td><input type="password" name="txtClaveUsuario" id="txtClaveUsuario" size="58"/></td>
                     </tr>
                     <tr>
                         <td><label>Nivel</label></td>

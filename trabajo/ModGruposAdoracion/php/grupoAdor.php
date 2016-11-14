@@ -1,5 +1,5 @@
 <?php
-include "../../php/conexion.php";
+include "../../ModGeneral/php/conexion.php";
 $txtCodigoGrupoAdor        = $_POST['txtCodigoGrupoAdor'];
 $txtNombreGrupoAdor        = $_POST['txtNombreGrupoAdor'];
 $cmbEstadoGrupoAdor        = $_POST['cmbEstadoGrupoAdor'];

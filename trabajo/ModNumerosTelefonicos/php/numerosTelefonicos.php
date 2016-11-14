@@ -1,10 +1,10 @@
 <?php
-include "../../php/conexion.php";
+include "../../ModGeneral/php/conexion.php";
 $txtCodigoNumeroTelefono = $_POST['txtCodigoNumeroTelefono'];
 $txtNombreNumeroTelefono = $_POST['txtNombreNumeroTelefono'];
 $txtNumeroTelefono       = $_POST['txtNumeroTelefono'];
 
-$accion           = $_POST['accion'];
+$accion = $_POST['accion'];
 
 switch ($accion) {
     case 'insertar':{

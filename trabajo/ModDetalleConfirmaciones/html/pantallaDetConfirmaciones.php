@@ -3,7 +3,7 @@
     <head>
         <title>Detalle de Confirmaciones</title>
         <meta charset="utf8">
-        <link rel="stylesheet" href="../../css/estilosFormularios2.css">
+        <link rel="stylesheet" href="../../ModGeneral/css/estilosFormularios2.css">
     </head>
     <body background="fondo2.jpg">
         <div class="agrupamiento"><!--inicio div agrupamiento-->

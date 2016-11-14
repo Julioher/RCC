@@ -1,9 +1,9 @@
 <?php
-include "../../php/conexion.php";
+include "../../ModGeneral/php/conexion.php";
 $txtCodigoMatrimonio = $_POST['txtCodigoMatrimonio'];
-$txtEsposo = $_POST['txtEsposo'];
-$txtEsposa = $_POST['txtEsposa'];
-$txtSacerdote = $_POST['txtSacerdote'];
+$txtEsposo           = $_POST['txtEsposo'];
+$txtEsposa           = $_POST['txtEsposa'];
+$txtSacerdote        = $_POST['txtSacerdote'];
 $accion              = $_POST['accion'];
 
 switch ($accion) {
@@ -31,7 +31,7 @@ switch ($accion) {
             if ($txtEsposa != "") {
                 $donde .= " AND idEsposa like '%" . $txtEsposa . "%'";
             }
-             if ($txtSacerdote != "") {
+            if ($txtSacerdote != "") {
                 $donde .= " AND idSacerdote like '%" . $txtSacerdote . "%'";
             }
 

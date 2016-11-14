@@ -1,5 +1,5 @@
 <?php
-include "../../php/conexion.php";
+include "../../ModGeneral/php/conexion.php";
 
 $txtCodigoFeligres  = $_POST['txtCodigoFeligres'];
 $txtPrimerNombre    = $_POST['txtPrimerNombre'];

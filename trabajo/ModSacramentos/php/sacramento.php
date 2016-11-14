@@ -1,5 +1,5 @@
 <?php
-include "../../php/conexion.php";
+include "../../ModGeneral/php/conexion.php";
 $txtCodigoSacramento = $_POST['txtCodigoSacramento'];
 $txtNombreSacramento = $_POST['txtNombreSacramento'];
 $accion              = $_POST['accion'];

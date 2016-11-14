@@ -3,9 +3,9 @@
     <head>
         <title>Pantalla Matrimonios</title>
         <meta charset="utf8">
-         <script type="text/javascript" src="../../js/jquery_p.js"></script>
+         <script type="text/javascript" src="../../ModGeneral/js/jquery_p.js"></script>
         <script type="text/javascript" src="../../ModMatrimonios/js/matrimonios.js"></script>
-        <link rel="stylesheet" href="../../css/estilosFormularios2.css">
+        <link rel="stylesheet" href="../../ModGeneral/css/estilosFormularios2.css">
     </head>
     <body>
         <div class="agrupamiento"><!--inicio div agrupamiento-->

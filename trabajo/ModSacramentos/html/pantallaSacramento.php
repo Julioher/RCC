@@ -3,9 +3,9 @@
     <head>
         <title>Pantalla Sacramentos</title>
         <meta charset="utf8">
-        <script type="text/javascript" src="../../js/jquery_p.js"></script>
+        <script type="text/javascript" src="../../ModGeneral/js/jquery_p.js"></script>
         <script type="text/javascript" src="../../ModSacramentos/js/sacramento.js"></script>
-        <link rel="stylesheet" href="../../css/estilosFormularios2.css">
+        <link rel="stylesheet" href="../../ModGeneral/css/estilosFormularios2.css">
     </head>
     <body background="fondo2.jpg">
         <div class="agrupamiento"><!--inicio div agrupamiento-->

@@ -1,0 +1,289 @@
+
+/* inicio de código que da estilo a index*/
+.body{
+	font-size: 16px;
+	font-family: arial;
+	background-size: 100vw 100vh;
+	background-attachment: fixed;
+}
+
+
+#contenedor{
+	width:100%;
+	max-width:100%;
+	margin: 0 auto;
+	overflow:hidden;
+	
+}
+
+
+/*#divmenu{
+	display: flex;
+	margin: auto;
+	width:70%;
+	background-color:#DBA901;
+	height:40px;
+	margin-bottom: 10px;
+	box-sizing: border-box;
+}
+
+li{		
+	display: inline;
+	padding: 5px 5px 5px 5px;
+	
+}*/
+
+#imagen{
+
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	box-sizing: border-box;
+}
+#vaticano{
+	width: 100%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	box-sizing: border-box;
+}
+
+#subcontenedor{
+
+	margin: auto;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+	height:961px;
+	box-sizing: border-box;
+	background: #F5D0A9;
+}
+
+#subcontenedor2{
+	background-color: #F5D0A9;
+	margin: auto;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+	box-sizing: border-box;
+	text-align:center;
+	padding-bottom:0.5px;
+}
+
+#izquierdo{
+	width: 25%;
+	height:900px;
+	background-color: #F5D0A9;
+	float: left;
+	box-sizing: border-box;
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+	text-align:center;
+}
+
+#centro{
+	width: 45%;
+	height:900px;
+	background-color: #F6D8CE;
+	float: left;
+	box-sizing: border-box;
+	padding-top: 5px;
+	padding-left: 5px;
+	text-align:center;
+	padding-right: 5px;
+}
+#derecho{
+	width: 30%;
+	height:900px;
+	background-color: #F5DA81;
+	float: left;
+	box-sizing: border-box;
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+#pie{
+	background-color: #D8CEF6;
+	width:100%;
+	height: 50px;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	box-sizing: border-box;
+	float: left;
+	text-align:center;
+}
+
+ @media screen and (max-width:800px){
+#divSubcontenedor{
+width:70%;
+}
+ #derecho{
+	width:100%;
+}
+#centro{
+	width:100%;
+}
+#izquierdo{
+	width:100%;
+}
+#pieprincipal{
+	width:100%;
+}
+#pie{
+	width:100%;
+}
+/*#divmenu{
+		width:70%;
+		display: block;
+		height:80px;
+	}*/
+	#subcontenedor2{
+	width:70%;
+}
+
+header label {
+display: block;
+}
+.menu {
+position:absolute;
+top: 29px;
+/*left: 0;*/
+left: 15%;
+width: 70%;
+transform: translateX(-121%);
+transition: all 0.3s;
+}
+.menu ul{
+display: block;
+background: #555;
+}
+#btn-menu:checked ~ .menu{
+	transform: translateX(0%);
+	}
+}
+
+@media screen and (max-width:500px){
+	#pie{
+	display: none;
+	
+}
+
+header label {
+display: block;
+}
+.menu {
+position:absolute;
+top: 29px;
+/*left: 0;*/
+left: 15%;
+width: 70%;
+transform: translateX(-121%);
+transition: all 0.3s;
+}
+.menu ul{
+display: block;
+background: #555;
+}
+#btn-menu:checked ~ .menu{
+	transform: translateX(0%);
+	}	
+}
+@media screen and (max-width:400px){
+/*#divmenu{
+		width:70%;
+		display: block;
+		height:100px;
+	}*/
+	
+header label {
+display: block;
+}
+.menu {
+position:absolute;
+top: 29px;
+/*left: 0;*/
+left: 15%;
+width: 70%;
+transform: translateX(-121%);
+transition: all 0.3s;
+}
+.menu ul{
+display: block;
+background: #555;
+}
+#btn-menu:checked ~ .menu{
+	transform: translateX(0%);
+	}
+}
+@media screen and (max-width:350px){
+/*#divmenu{
+		width:70%;
+		display: block;
+		height:120px;
+	}*/
+	
+header label {
+display: block;
+}
+.menu {
+position:absolute;
+top: 29px;
+/*left: 0;*/
+left: 15%;
+width: 70%;
+transform: translateX(-121%);
+transition: all 0.3s;
+}
+.menu ul{
+display: block;
+background: #555;
+
+}
+#btn-menu:checked ~ .menu{
+	transform: translateX(0%);
+	}
+}
+
+#romero{
+	
+	width: 100px;
+}
+#papa{
+	
+	width: 120px;
+}
+
+.p{
+	color:#B45F04;
+	background-color:#F5A9A9;
+}
+.b{
+	color:#B45F04;	
+}
+
+#dibujo_igle1{
+width: 100%;
+height: 250px;
+margin-top: 20px;
+}
+
+#dibujo_igle2{
+width: 100%;
+height: 250px;
+margin-top: 70px;
+}
+
+.c{
+color:#B45F04;	
+text-align: justify;
+padding-left: 25px;
+padding-right: 25px;
+}
+/* fin de código que da estilo a index*/
+
+

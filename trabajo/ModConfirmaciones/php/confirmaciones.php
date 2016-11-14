@@ -1,8 +1,8 @@
 <?php
-include "../../php/conexion.php";
-$txtCodigoConfirma = $_POST['txtCodigoConfirma'];
+include "../../ModGeneral/php/conexion.php";
+$txtCodigoConfirma   = $_POST['txtCodigoConfirma'];
 $txtNombreConfirmado = $_POST['txtNombreConfirmado'];
-$txtSacerdote = $_POST['txtSacerdote'];
+$txtSacerdote        = $_POST['txtSacerdote'];
 $accion              = $_POST['accion'];
 
 switch ($accion) {
@@ -26,7 +26,7 @@ switch ($accion) {
             if ($txtNombreConfirmado != "") {
                 $donde .= " AND idConfirmante like '%" . $txtNombreConfirmado . "%'";
             }
-             if ($txtSacerdote != "") {
+            if ($txtSacerdote != "") {
                 $donde .= " AND idSacerdote like '%" . $txtSacerdote . "%'";
             }
 

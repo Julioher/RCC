@@ -3,9 +3,9 @@
     <head>
         <title>Pantalla Teléfonos</title>
         <meta charset="utf8">
-        <link rel="stylesheet" href="../../css/estilosFormularios2.css">
+        <link rel="stylesheet" href="../../ModGeneral/css/estilosFormularios2.css">
         <script type="text/javascript" src="../../ModTelefonos/js/telefono.js"></script>
-        <script type="text/javascript" src="../../js/jquery_p.js"></script>
+        <script type="text/javascript" src="../../ModGeneral/js/jquery_p.js"></script>
     </head>
     <body background="fondo2.jpg">
         <div class="agrupamiento"><!--inicio div agrupamiento-->

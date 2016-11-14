@@ -1,9 +1,9 @@
 <?php
-include "../../php/conexion.php";
-$txtCodigoBautismo = $_POST['txtCodigoBautismo'];
+include "../../ModGeneral/php/conexion.php";
+$txtCodigoBautismo  = $_POST['txtCodigoBautismo'];
 $txtNombreBautizado = $_POST['txtNombreBautizado'];
-$txtSacerdote = $_POST['txtSacerdote'];
-$accion              = $_POST['accion'];
+$txtSacerdote       = $_POST['txtSacerdote'];
+$accion             = $_POST['accion'];
 
 switch ($accion) {
     case "insertar":{
@@ -27,7 +27,7 @@ switch ($accion) {
             if ($txtNombreBautizado != "") {
                 $donde .= " AND idBautizado like '%" . $txtNombreBautizado . "%'";
             }
-             if ($txtSacerdote != "") {
+            if ($txtSacerdote != "") {
                 $donde .= " AND idSacerdote like '%" . $txtSacerdote . "%'";
             }
 

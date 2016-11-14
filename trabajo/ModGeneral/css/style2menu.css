@@ -1,0 +1,188 @@
+/* inicio de código que da estilo al menu */
+*{
+	/*margin: 0;
+	padding: 0;*/
+	box-sizing: border-box;
+	font-family: sans-serif;
+	 font-size: 12px;
+	}
+
+	header{
+	box-sizing: border-box;
+	font-family: sans-serif;
+	align-items: center; /*línea agregada*/
+	}
+	header{
+		/*height: 50px;*/
+		background: #CEF6F5;
+		color: #245492;
+		display: flex;
+		justify-content: flex-end;
+		aling-items: center;
+		/*estos son elementos que he agregado al código*/
+		width: 70%;
+		margin-left: 15%;
+		margin-bottom: 10px;
+		margin-top: 10px;
+		border: 1px solid #B9F0F7;
+	}
+
+	#btn-menu{
+		display: none;
+	}
+
+	header label{
+	font-size: 16px;
+	cursor: pointer;
+	display: none;
+	
+	}
+	.menu ul{
+	margin: 0;
+	padding: 0;
+	background-color: #CEF6F5;
+	display: flex;
+	list-style: none;
+
+	}
+
+	.menu ul ul {
+		display: none;
+		position: absolute; /*se lo agregué para que no mezcle los menús*/
+
+	}
+
+	.menu a {
+		display:block;
+		padding: 10px 20px;
+		color: #245492;
+		text-decoration: none;
+	}
+	.menu a:hover{
+		background: rgba(0,0,0, 0.2);
+	}
+	/*este código lo agregué yo*/
+	.menu a span {
+		margin-left: 10px;
+	}
+	/*este código lo agregué yo*/
+	.menu ul li:hover ul {
+		display: block;
+		position: absolute;
+	}
+
+@media (max-width:768px){
+
+header label {
+	display: block;
+}
+.menu {
+	position:absolute;
+	top: 29px;
+	/*left: 0;*/
+	left: 15%;
+	width: 70%;
+	transform: translateX(-121%);
+	transition: all 0.3s;
+	border: 2px solid #B9F0F7;/*código agregado por mí*/
+}
+.menu ul{
+	display: block;
+	background: #CEF6F5;
+}
+/*este código lo agregué yo*/
+.menu ul li:hover ul {
+	display: none;
+	position: static;
+	}
+/*este código lo agregué yo*/
+.menu a span {
+	position: absolute;
+	right: 5px;
+	}
+
+
+#btn-menu:checked ~ .menu{
+	transform: translateX(0%);
+}
+
+/*este código lo agregué yo*/
+.menu ul ul {
+		background: rgba(0,0,0,0.2);
+		position: relative; /*se lo agregué para que no mezcle los menús*/
+		background: #B9F0F7; /*línea agregada para que dé color celeste a submenú*/
+	}
+	/*este código lo agregué yo*/
+.menu ul ul a {
+	padding: 15px 40px;
+}
+/*este código fue agregado por mí para que
+	el header cambie a celeste dentro del @media*/
+	header{
+		background: #CEF6F5;
+	}
+}
+
+
+@media (max-width:1130px){
+
+header label {
+display: block;
+}
+.menu {
+	position:absolute;
+	top: 29px;
+	/*left: 0;*/
+	left: 15%;
+	width: 70%;
+	transform: translateX(-121%);
+	transition: all 0.3s;
+	border: 2px solid #B9F0F7;/*código agregado por mí*/
+
+}
+
+.menu ul{
+	display: block;
+	background: #CEF6F5;
+	width: 100%;
+}
+
+.menu ul li:hover ul {
+		display: none;
+		position: static;
+	}
+.menu a span {
+	position: absolute;
+	right: 5px;
+}
+#btn-menu:checked ~ .menu{
+	transform: translateX(0%);
+	}
+
+	.menu ul ul {
+		background: rgba(0,0,0,0.2);
+		position: relative; /*se lo agregué para que no mezcle los menús*/
+		background: #B9F0F7; /*línea agregada para que dé color celeste a submenú*/
+
+	}
+
+	.menu ul ul a {
+		padding: 15px 40px;
+	}
+	
+	/*este código fue agregado por mí para que
+	el header cambie a celeste dentro del @media*/
+	header{
+		background: #CEF6F5;
+	}
+
+}
+
+/* fin de código que da estilo al menu*/
+
+#uno{
+	width:30% ;
+	
+	background-color: yellow;
+}
+

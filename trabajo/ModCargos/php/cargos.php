@@ -1,5 +1,5 @@
 <?php
-include "../../php/conexion.php";
+include "../../ModGeneral/php/conexion.php";
 $txtCodigoCargo = $_POST['txtCodigoCargo'];
 $txtNombreCargo = $_POST['txtNombreCargo'];
 $cmbEstadoCargo = $_POST['cmbEstadoCargo'];

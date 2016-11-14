@@ -1,22 +1,22 @@
 <?php
-include "../../php/conexion.php";
-$txtCodigoUsuario = $_POST['txtCodigoUsuario'];
-$txtNombreUsuario = $_POST['txtNombreUsuario'];
-$txtUsuario       = $_POST['txtUsuario'];
-$txtClaveUsuario  = $_POST['txtClaveUsuario'];
-$cmbNivelUsuario  = $_POST['cmbNivelUsuario'];
-$accion           = $_POST['accion'];
+include "../../ModGeneral/php/conexion.php";
+$txtCodigoUsuario  = $_POST['txtCodigoUsuario'];
+$txtCodigoFeligres = $_POST['txtFeligres'];
+$txtUsuario        = $_POST['txtUsuario'];
+$txtClaveUsuario   = $_POST['txtClaveUsuario'];
+$cmbNivelUsuario   = $_POST['cmbNivelUsuario'];
+$accion            = $_POST['accion'];
 
 switch ($accion) {
     case 'insertar':{
             $consulta = mysql_num_rows(mysql_query("SELECT idFeligres
-             FROM usuarios WHERE idFeligres = '$txtNombreUsuario'"));
+             FROM usuarios WHERE idFeligres = '$txtCodigoFeligres'"));
             if ($consulta > 0) {
                 echo 0;
             } else {
                 $consulta = mysql_query("INSERT INTO  usuarios (idUsuario,
                         idFeligres, usuario, clave, nivel, fechaRegistro)
-                VALUES('$txtCodigoUsuario', '$txtNombreUsuario',
+                VALUES('$txtCodigoUsuario', '$txtCodigoFeligres',
                     '$txtUsuario','$txtClaveUsuario', '$cmbNivelUsuario', NOW())");
                 echo 1;
             }mysql_close($conexion);
@@ -28,20 +28,22 @@ switch ($accion) {
             if ($txtCodigoUsuario != "") {
                 $donde .= " AND idUsuario like '%" . $txtCodigoUsuario . "%'";
             }
+            if ($txtCodigoFeligres != "") {
+                $donde .= " AND idFeligres like '%" . $txtCodigoFeligres . "%'";
+            }
             if ($txtNombreUsuario != "") {
                 $donde .= " AND idFeligres like '%" . $txtNombreUsuario . "%'";
             }
             if ($txtUsuario != "") {
                 $donde .= " AND usuario like '%" . $txtUsuario . "%'";
             }
-            if ($txtClaveUsuario != "") {
-                $donde .= " AND clave like '%" . $txtClaveUsuario . "%'";
-            }
             if ($cmbNivelUsuario != "") {
                 $donde .= " AND nivel like '%" . $cmbNivelUsuario . "%'";
             }
 
-            $consulta = mysql_query("SELECT * FROM usuarios WHERE $donde");
+            //$consulta = mysql_query("SELECT * FROM usuarios WHERE $donde");
+
+            $consulta = mysql_query("SELECT usuarios.*, feligreses.pApellido, feligreses.sApellido, feligreses.pNombre, feligreses.sNombre FROM usuarios, feligreses WHERE $donde AND usuarios.idFeligres=feligreses.idFeligres");
 
             $resultado = "<table style='border:1px solid #F2F2F2;
             width:408px; border-radius:5px; text-align:left;'>
@@ -56,9 +58,9 @@ switch ($accion) {
                 $n++;
                 $resultado .= "<tr id='eliminar" . $reg['0'] . $n . "'>
                 <td><font color='#000000'>" . $n . "</font>" . "</td>" . "\n<td>" .
-                    "<a name='" . $reg['0'] . "/" . $n . "' id='" . $reg['0'] .
-                    "' href=\"javascript:subirDatos('" . $reg['idUsuario'] . "', '" . $reg['idFeligres'] . "','" . $reg['usuario'] . "','" . $reg['clave'] . "','" . $reg['nivel'] . "')
-                 \">" . $reg['0'] . "</a>" . "</td><td id='" . $reg['0'] . $n . "'>" . $reg['1'] .
+                    "<a name='" . $reg['idUsuario'] . "/" . $n . "' id='" . $reg['idUsuario'] .
+                    "' href=\"javascript:subirDatos('" . $reg['idUsuario'] . "', '" . $reg['idFeligres'] . "', '" . $reg['pApellido'] . "', '" . $reg['sApellido'] . "', '" . $reg['pNombre'] . "', '" . $reg['sNombre'] . "', '" . $reg['usuario'] . "', '" . $reg['nivel'] . "')
+                 \">" . $reg['idUsuario'] . "</a>" . "</td><td id='" . $reg['idUsuario'] . $n . "'>" . $reg['pApellido'] . " " . $reg['sApellido'] . ", " . $reg['pNombre'] . " " . $reg['sNombre'] .
                     "</td></tr>";
 
             }
@@ -74,8 +76,8 @@ switch ($accion) {
             if ($consulta > 0) {
                 echo 0;
             } else {
-                $consulta = mysql_query("UPDATE usuarios SET usuario =
-                 '$txtUsuario', fechaModificacion = NOW()
+                $consulta = mysql_query("UPDATE usuarios SET nivel =
+                 '$cmbNivelUsuario', fechaModificacion = NOW()
                   WHERE idUsuario = '$txtCodigoUsuario'");
                 echo 1;
             }

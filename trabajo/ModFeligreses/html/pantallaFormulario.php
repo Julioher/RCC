@@ -3,15 +3,15 @@
 	<head>
 		<title>pantalla formulario feligres</title>
 		<meta charset="utf-8"/>
-		<link rel="stylesheet" href="../../css/estilosFormularios2.css"/>
-		<link rel="stylesheet" href="../../css/calendario.css"/>
-		<script type="text/javascript" src="../../js/jquery_p.js"></script>
-        <script type="text/javascript" src="../../js/jquery.js"></script>
-		<script type="text/javascript" src="../../js/calendario.js"></script>
-		<script type="text/javascript" src="../../js/codigo.js"></script>
+		<link rel="stylesheet" href="../../ModGeneral/css/estilosFormularios2.css"/>
+		<link rel="stylesheet" href="../../ModGeneral/css/calendario.css"/>
+		<script type="text/javascript" src="../../ModGeneral/js/jquery_p.js"></script>
+        <script type="text/javascript" src="../../ModGeneral/js/jquery.js"></script>
+		<script type="text/javascript" src="../../ModGeneral/js/calendario.js"></script>
+		<script type="text/javascript" src="../../ModGeneral/js/codigo.js"></script>
 		<script type="text/javascript" src="../../ModFeligreses/js/formulario.js"></script>
 	</head>
-	<body background="fondo2.jpg">
+	<body >
 		<div class="agrupamiento"> <!--Inicio div agrupamiento  src="../js/formulario.js"-->
 			<form id="form-register2">
 				<h4>Registro de Feligreses</h4>
@@ -77,7 +77,7 @@
 				<div id="divAE" style="width 200px; height: 100px; background: #fff;
 				 border: 1px solid gray ; overflow-y: auto; height: 75px; margin-left:150px; margin-right:150px;"> <!--inicio de divAE-->
 						<?php
-include "../../php/conexion.php";
+include "../../ModGeneral/php/conexion.php";
 //$con=conectar();
 
 /*$registros = mysql_query("SELECT * FROM atributo");

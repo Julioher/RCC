@@ -1,35 +1,46 @@
 <?php
+@session_start();
+include '../../ModGeneral/php/conexion.php';
+include '../../ModGeneral/php/JSON.php';
+$json = new Services_JSON();
 
-include '../../php/conexion.php';
+$accion = $_POST["accion"];
+//$txtCodigoPersona = $_POST["prmTxtCodigoPersona"];
+$txtNombresPersona   = addslashes(strtoupper($_POST["prmNombresPersona"]));
+$txtApellidosPersona = addslashes(strtoupper($_POST["prmApellidosPersona"]));
+$numeroPersonas      = 0;
 
-if ($_POST) {
-    $q   = $_POST["palabra"];
-    $sql = mysql_query("SELECT * FROM feligreses WHERE pNombre LIKE '%$q%'");
+switch ("$accion") {
 
-    while ($sql_res = mysql_fetch_array($sql)) {
-        $idFeligres     = $sql_res["idFeligres"];
-        $pNombre        = $sql_res["pNombre"];
-        $sNombre        = $sql_res["sNombre"];
-        $pApellido      = $sql_res["pApellido"];
-        $sApellido      = $sql_res["sApellido"];
-        $apellidoCasada = $sql_res["apellidoCasada"];
-        ?>
+    case "buscarPersonaNombresApellidosMultiple":
+        {
+            $consultaPersonas = mysql_query("SELECT idFeligres, pApellido, sApellido,
+                pNombre, sNombre FROM feligreses
+                WHERE pApellido like '%$txtApellidosPersona%'
+                OR sApellido like '%$txtApellidosPersona%'
+                OR pNombre like '%$txtNombresPersona%'
+                OR sNombre like '%$txtNombresPersona%' AND estadoRegistro='1'");
 
-<div><?php echo $pNombre; ?> <?php echo $sNombre; ?> <?php echo $pApellido; ?> <?php echo $sApellido; ?> <?php echo $apellidoCasada; ?></div>
+            $resultadoPersonas = "<table border='0' id='dataGridB' style='width:100%'>";
+            while ($regPersonas = mysql_fetch_array($consultaPersonas)) {
+                $numeroPersonas++;
 
-<?php
+                $resultadoPersonas .= "<tr style='cursor: pointer;' onClick=\"javascript:fnSubirDatosPersona
+                ('" . $regPersonas["idFeligres"] . "', '" . $regPersonas["pApellido"] . "', '"
+                    . $regPersonas["sApellido"] . "', '" . $regPersonas["pNombre"] . "', '"
+                    . $regPersonas["sNombre"] . "', '" . $_POST["id"] . "', '" . $_POST["ojetoCodigo"]
+                    . "')\"><td style='width: 40px;'>" . $regPersonas["idFeligres"]
+                    . "</td><td style='width: 200px;'>" . $regPersonas["pApellido"] . " "
+                    . $regPersonas["sApellido"] . ", " . $regPersonas["pNombre"] . " "
+                    . $regPersonas["sNombre"] . "</td></tr>";
+
+            }
+            mysql_close($conexion);
+            $resultado .= "</table>";
+            $returnArray = array(numeroPersonas => $numeroPersonas, resultadoPersonas => $resultadoPersonas);
+            $myjson      = $json->encode($returnArray);
+            echo $myjson;
+        }
+        break;
+
 }
-} else {
-
-}
-/*$res = mysql_query($sql_res);
-
-$arreglo_php = array();
-
-if (mysql_num_rows($res) == 0) {
-array_push($arreglo_php, "No hay datos");
-} else {
-while ($palabras = mysql_fetch_array($res)) {
-array_push($arreglo_php, $palabras["pNombre"]);
-}
-}*/
