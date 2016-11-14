@@ -33,6 +33,17 @@ function subirDatos(idUsuario, idFeligres, pApellido, sApellido, pNombre, sNombr
 	$("#txtNombreUsuario").focus();
 }
 
+function generarUsuarios(){
+		
+	/*var pApellido = document.getElementById('txtPrimerApellido').value;
+	var sApellido = document.getElementById('txtSegundoNombre').value;
+	var pNombre = document.getElementById('txtPrimerNombre').value;
+	var sNombre = document.getElementById('txtSegundoNombre').value;
+	var txt_codigo = document.getElementById('txtCodigoFeligres').value;*/
+		
+
+}
+
 function insertarDatos(){//inicio de función insertarDatos
 	obtenerValoresObjetos();
 	 if(txtNombreUsuario == '' ){
