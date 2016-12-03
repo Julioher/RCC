@@ -1,13 +1,23 @@
 function obtenerValoresObjetos(){
 	txtCodigoBautismo= $("#txtCodigoBautismo").val();
+	txtCodigoFeligres= $("#txtCodigoFeligres").val();
 	txtNombreBautizado = $("#txtNombreBautizado").val();
 	txtSacerdote = $("#txtSacerdote").val();
+	txtNombrePadre = $("#txtNombrePadre").val();
+	txtNombreMadre = $("#txtNombreMadre").val();
+	txtNombrePadrino = $("#txtNombrePadrino").val();
+	txtNombreMadrina = $("#txtNombreMadrina").val();
 }
 
 function limpiarObjetos(){
 	$("#txtCodigoBautismo").val("");
+	$("#txtCodigoFeligres").val("");
 	$("#txtNombreBautizado").val("");
 	$("#txtSacerdote").val("");
+	$("#txtNombrePadre").val("");
+	$("#txtNombreMadre").val("");
+	$("#txtNombrePadrino").val("");
+	$("#txtNombreMadrina").val("");
 	$("#txtNombreBautizado").focus();
 }
 
@@ -16,10 +26,15 @@ function limpiarDatos(){
 	$("#mostrar").html("");
 }
 
-function subirDatos(idBautismo, idBautizado, idSacerdote){
+function subirDatos(idBautismo,idFeligres, apellidoCasada,  pApellido, sApellido, pNombre, sNombre){
 	$("#txtCodigoBautismo").val(idSacramento);
-	$("#txtNombreBautizado").val(nombreSacramento);
+	$("#txtCodigoFeligres").val(idFeligres);
+	$("#txtNombreBautizado").val(apellidoCasada+" "+pApellido+" "+sApellido+" "+pNombre+" "+sNombre);
 	$("#txtSacerdote").val(idSacerdote);
+	$("#txtNombrePadre").val(pApellido+" "+sApellido+" "+pNombre+" "+sNombre);
+	$("#txtNombreMadre").val(pApellido+" "+sApellido+" "+pNombre+" "+sNombre);
+	$("#txtNombrePadrino").val(pApellido+" "+sApellido+" "+pNombre+" "+sNombre);
+	$("#txtNombreMadrina").val(pApellido+" "+sApellido+" "+pNombre+" "+sNombre);
 	$("#txtNombreBautizado").focus();
 }
 
@@ -46,7 +61,10 @@ limpiarObjetos();
 			 type:"POST",
 			 data:{
 			 	txtNombreBautizado:txtNombreBautizado,
-			 	txtSacerdote:txtSacerdote, accion:'insertar'},
+			 	txtCodigoFeligres:txtCodigoFeligres,
+			 	txtSacerdote:txtSacerdote, txtNombrePadre:txtNombrePadre,
+			 	txtNombreMadre:txtNombrePadre, txtNombrePadrino:txtNombrePadrino,
+			 	txtNombreMadrina:txtNombreMadrina, accion:'insertar'},
 			 success:function(resultado){
 				if(resultado == 0){
 					alert("Nombre del Bautizado ya existe...");
@@ -68,10 +86,13 @@ function buscarDatos(){ //inicio de función buscarDatos
 		{url:"../php/Bautizados.php",
 		cache:false,
 		type:"POST",
-		data:{txtCodigoBautismo:txtCodigoBautismo,
-		txtNombreBautizado:txtNombreBautizado,
-		txtSacerdote:txtSacerdote,
-		accion:'buscar'},
+		data:{
+			txtCodigoBautismo:txtCodigoBautismo,
+			txtCodigoFeligres:txtCodigoFeligres,
+			txtNombreBautizado:txtNombreBautizado,
+			txtSacerdote:txtSacerdote,txtNombrePadre:txtNombrePadre,
+			txtNombreMadre:txtNombrePadre, txtNombrePadrino:txtNombrePadrino,
+			txtNombreMadrina:txtNombreMadrina, accion:'buscar'},
 		 success:function(resultado){
 		 	$("#mostrar").html(resultado);
 		 	limpiarObjetos();
@@ -106,7 +127,9 @@ function modificarDatos(){//inicio de función modificarDatos
 				type:"POST",
 				data:{txtCodigoBautismo:txtCodigoBautismo,
 				 txtNombreBautizado:txtNombreBautizado,
-				 txtSacerdote:txtSacerdote, accion:'modificar'},
+				 txtSacerdote:txtSacerdote,txtNombrePadre:txtNombrePadre,
+			 	txtNombreMadre:txtNombrePadre, txtNombrePadrino:txtNombrePadrino,
+			 	txtNombreMadrina:txtNombreMadrina, accion:'modificar'},
 				 success:function(resultado){
 				 	if(resultado == 0){
 				 		alert("El nombre del Bautizado ya existe...");

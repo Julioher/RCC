@@ -3,7 +3,7 @@
 $host     = 'localhost';
 $user     = 'root';
 $password = '';
-$db       = 'registroiglesia';
+$db       = 'registro_iglesia';
 $conexion = mysql_connect("$host", "$user", "$password") or die(mysql_error());
 mysql_select_db($db, $conexion) or die("Problemas en la selección de la base de datos");
 

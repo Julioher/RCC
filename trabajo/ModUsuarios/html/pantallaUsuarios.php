@@ -17,13 +17,16 @@
                     <tr>
                         <td><label>Código</label></td>
                         <td><input type="text" name="txtCodigoUsuario" id="txtCodigoUsuario" size="9"/>
-                            <input type="text" name="txtCodigoFeligres" id="txtCodigoFeligres" size="9"/>
+                         <label>Código del Feligrés</label>
+                         <input type="text" name="txtCodigoFeligres" id="txtCodigoFeligres" size="9"/>
                         </td>
                     </tr>
                     <tr>
                         <td><label>Nombre</label></td>
-                        <td><input type="text" name="txtNombreUsuario" id="txtNombreUsuario" size="58" onKeyUp="fnBuscarPersonaNombresApellidos(this.id, 'txtCodigoFeligres')"/></td>
+                        <td><input type="text" name="txtNombreUsuario" id="txtNombreUsuario" size="58" onKeyUp="fnBuscarPersonaNombresApellidos(this.id, 'txtCodigoFeligres')"/>
                         <?php include 'divBuscador.php';?>
+
+                        </td>
                     </tr>
                     <tr>
                         <td>Usuario</td>
@@ -67,6 +70,8 @@
                             </td>
                     </tr>
                 </table>
+
+
             </form>
         </div> <!--final div agrupamiento-->
     </body>

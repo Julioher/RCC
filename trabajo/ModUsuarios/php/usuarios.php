@@ -43,7 +43,7 @@ switch ($accion) {
 
             //$consulta = mysql_query("SELECT * FROM usuarios WHERE $donde");
 
-            $consulta = mysql_query("SELECT usuarios.*, feligreses.pApellido, feligreses.sApellido, feligreses.pNombre, feligreses.sNombre FROM usuarios, feligreses WHERE $donde AND usuarios.idFeligres=feligreses.idFeligres");
+            $consulta = mysql_query("SELECT usuarios.*,feligreses.apellidoCasada, feligreses.pApellido, feligreses.sApellido, feligreses.pNombre, feligreses.sNombre FROM usuarios, feligreses WHERE $donde AND usuarios.idFeligres=feligreses.idFeligres");
 
             $resultado = "<table style='border:1px solid #F2F2F2;
             width:408px; border-radius:5px; text-align:left;'>
@@ -59,7 +59,7 @@ switch ($accion) {
                 $resultado .= "<tr id='eliminar" . $reg['0'] . $n . "'>
                 <td><font color='#000000'>" . $n . "</font>" . "</td>" . "\n<td>" .
                     "<a name='" . $reg['idUsuario'] . "/" . $n . "' id='" . $reg['idUsuario'] .
-                    "' href=\"javascript:subirDatos('" . $reg['idUsuario'] . "', '" . $reg['idFeligres'] . "', '" . $reg['pApellido'] . "', '" . $reg['sApellido'] . "', '" . $reg['pNombre'] . "', '" . $reg['sNombre'] . "', '" . $reg['usuario'] . "', '" . $reg['nivel'] . "')
+                    "' href=\"javascript:subirDatos('" . $reg['idUsuario'] . "', '" . $reg['idFeligres'] . "', '" . $reg['apellidoCasada'] . "', '". $reg['pApellido'] . "', '" . $reg['sApellido'] . "', '" . $reg['pNombre'] . "', '" . $reg['sNombre'] . "', '" . $reg['usuario'] . "', '" . $reg['nivel'] . "')
                  \">" . $reg['idUsuario'] . "</a>" . "</td><td id='" . $reg['idUsuario'] . $n . "'>" . $reg['pApellido'] . " " . $reg['sApellido'] . ", " . $reg['pNombre'] . " " . $reg['sNombre'] .
                     "</td></tr>";
 

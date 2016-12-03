@@ -26,10 +26,10 @@
                             <li><a href="../../ModBautizados/html/pantallaBautizados.php"target="_blank"><b>Bautismos</b></a></li>
                             <li><a href="../../ModComuniones/html/pantallaComuniones.php"target="_blank"><b>Comuniones</b></a></li>
                             <li><a href="../../ModConfirmaciones/html/pantallaConfirmaciones.php"target="_blank"><b>Confirmaciones</b></a></li>
-                            <li><a href="../../ModDetalleBautizados/html/pantallaDetBautismos.php"target="_blank"><b>Det. de Bautismos</b></a></li>
+                            <!--<li><a href="../../ModDetalleBautizados/html/pantallaDetBautismos.php"target="_blank"><b>Det. de Bautismos</b></a></li>
                             <li><a href="../../ModDetalleComuniones/html/pantallaDetComuniones.php"target="_blank"><b>Det. de Comuniones</b></a></li>
                             <li><a href="../../ModDetalleConfirmaciones/html/pantallaDetConfirmaciones.php"target="_blank"><b>Det. de Confirmaciones</b></a></li>
-                            <li><a href="../../ModDetalleMatrimonios/html/pantallaDetMatrimonios.php"target="_blank"><b>Det. de Matrimonios</b></a></li>
+                            <li><a href="../../ModDetalleMatrimonios/html/pantallaDetMatrimonios.php"target="_blank"><b>Det. de Matrimonios</b></a></li>-->
                             <li><a href="../../ModMatrimonios/html/pantallaMatrimonios.php"target="_blank"><b>Matrimonios</b></a></li>
                             <li><a href="../../ModNumerosTelefonicos/html/numerosTelefonicos.php"target="_blank"><b>Directorio Telefónico</b></a></li>
                         </ul>

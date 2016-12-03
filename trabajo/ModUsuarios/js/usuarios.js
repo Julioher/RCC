@@ -24,9 +24,9 @@ function limpiarDatos(){
 	$("#mostrar").html("");
 }
 
-function subirDatos(idUsuario, idFeligres, pApellido, sApellido, pNombre, sNombre, usuario, nivel){
+function subirDatos(idUsuario, idFeligres,apellidoCasada, pApellido, sApellido, pNombre, sNombre, usuario, nivel){
 	$("#txtCodigoUsuario").val(idUsuario);
-	$("#txtNombreUsuario").val(pApellido+" "+sApellido+" "+pNombre+" "+sNombre);
+	$("#txtNombreUsuario").val(apellidoCasada+" "+pApellido+" "+sApellido+" "+pNombre+" "+sNombre);
 	$("#txtCodigoFeligres").val(idFeligres);
 	$("#txtUsuario").val(usuario);
 	$("#cmbNivelUsuario").val(nivel);

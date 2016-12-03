@@ -8,7 +8,9 @@
     }
     else{
       $.post("../php/buscarFeligres.php",{
-        accion:"buscarPersonaNombresApellidosMultiple", prmNombresPersona:nombresPersona, prmApellidosPersona:apellidosPersona, id:id, ojetoCodigo:ojetoCodigo    
+        accion:"buscarPersonaNombresApellidosMultiple",
+        prmNombresPersona:nombresPersona, prmApellidosPersona:apellidosPersona,
+        id:id, ojetoCodigo:ojetoCodigo    
       },
       function recepcion(respuestaPersonas){
       arrayRespuesta=eval("(" + respuestaPersonas + ")");
@@ -26,11 +28,16 @@
     }
   }
 
-  // FUNCION PARA BUSCAR PROVEEDORES POR NOMBRE
-  function fnSubirDatosPersona(idFeligres, pApellido, sApellido, pNombre, sNombre, id, ojetoCodigo){
+  
+  function fnSubirDatosPersona(idFeligres,apellidoCasada, pApellido, sApellido, pNombre, sNombre, id, ojetoCodigo){
     $("#"+ojetoCodigo).val(idFeligres);
-    $("#"+id).val(pApellido + " " + sApellido + ", " + pNombre + " " + sNombre);
+    $("#"+id).val(apellidoCasada + " " +pApellido + " " + sApellido + ", " + pNombre + " " + sNombre);
     
+    if(apellidoCasada=="")
+      iac="";
+    else
+      iac=apellidoCasada[0];
+
     if(pApellido=="")
       ipa="";
     else
@@ -51,7 +58,7 @@
     else
       isn=sNombre[0];
 
-    $("#txtUsuario").val(ipa+isa+ipn+isn+idFeligres);
+    $("#txtUsuario").val(iac+ipa+isa+ipn+isn+idFeligres);
     $("#txtClaveUsuario").val("123456");
 
     $("#divBuscadorPersonas").css("display", "none");

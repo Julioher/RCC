@@ -5,9 +5,10 @@
         <meta charset="utf8">
         <script type="text/javascript" src="../../ModGeneral/js/jquery_p.js"></script>
         <script type="text/javascript" src="../../ModBautizados/js/Bautizados.js"></script>
+        <script type="text/javascript" src="../../ModUsuarios/js/buscarFeligres.js"></script>
         <link rel="stylesheet" href="../../ModGeneral/css/estilosFormularios2.css">
     </head>
-    <body background="fondo2.jpg">
+    <body >
         <div class="agrupamiento"><!--inicio div agrupamiento-->
             <form id="formSacra">
                 <h4>Registro de Bautismos</h4>
@@ -16,14 +17,33 @@
                         <td><label>Código</label></td>
                         <td><input type="text"  name="txtCodigoBautismo" id="txtCodigoBautismo" size="9"/></td>
                     </tr>
-                    <tr>
+                    <tr >
                         <td><label>Bautizado/a</label></td>
-                        <td><input type="text"  name="txtNombreBautizado" id="txtNombreBautizado" size="55"/></td>
+                         <td><label>codigo feligres</label><input type="text" id="txtCodigoFeligres" name="txtCodigoFeligres" size="9" ><input type="text"  name="txtNombreBautizado" id="txtNombreBautizado" size="55" onKeyUp="fnBuscarPersonaNombresApellidos(this.id, 'txtCodigoFeligres')"/></td>
+                        <?php include '../../ModUsuarios/html/divBuscador.php';?>
                     </tr>
                     <tr>
                         <td>Sacerdote</td>
-                        <td><input type="text" name="txtSacerdote" id="txtSacerdote" size="55"/></td>
+                        <td><input type="text" id="txtCodigoFeligres" name="txtCodigoFeligres"  size="9" ><input type="text" name="txtSacerdote" id="txtSacerdote" size="55"/></td>
                     </tr>
+
+                    <tr>
+                         <td><label>Padre</label></td>
+                         <td><input type="text" id="txtCodigoFeligres" name="txtCodigoFeligres" size="9" ><input type="text"  name="txtNombrePadre" id="txtNombrePadre" size="55"/></td>
+                    </tr>
+                    <tr>
+                         <td>Madre</td>
+                         <td><input type="text" id="txtCodigoFeligres" name="txtCodigoFeligres" size="9" ><input type="text" name="txtNombreMadre" id="txtNombreMadre" size="55"/></td>
+                    </tr>
+                     <tr>
+                         <td><label>Padrino</label></td>
+                         <td><input type="text" id="txtCodigoFeligres" name="txtCodigoFeligres" size="9" ><input type="text"  name="txtNombrePadrino" id="txtNombrePadrino" size="55"/></td>
+                    </tr>
+                    <tr>
+                         <td>Madrina</td>
+                         <td><input type="text" id="txtCodigoFeligres" name="txtCodigoFeligres" size="9" ><input type="text" name="txtNombreMadrina" id="txtNombreMadrina" size="55"/></td>
+                    </tr>
+
 
                     <tr style="height: 5px;">
                         <td colspan="2">&nbsp;</td>
